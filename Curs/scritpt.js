@@ -1,8 +1,18 @@
 "use strict";
-const result = confirm("Are you here?");
-console.log(result);
 
-const answer = +prompt("How old are you?");
-console.log(typeof answer);
+let numberOfFilms = prompt("How many films have you watched?");
+let lastFilm = prompt("Your last film.");
+let rate = prompt("How much do you rate it?");
 
-// document.write(answer)
+let personalMoieDB = {
+  count: numberOfFilms,
+  movies: {
+    lastFilm,
+    rate,
+  },
+  actors: "",
+  genres: [],
+  privat: false,
+};
+
+console.log(personalMoieDB);
