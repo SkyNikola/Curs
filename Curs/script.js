@@ -26,21 +26,21 @@ console.log(personalMoieDB);
 
 let num1 = 50;
 
-while (num <= 55) {
-  console.log(num);
-  num++;
+while (num1 <= 55) {
+  console.log(num1);
+  num1++;
 }
 
 let i1 = 0;
-while (i < 10) {
+while (i1 < 10) {
   console.log("The nunber is " + i1);
-  i++;
+  i1++;
 }
 
 let num12 = [45, 4, 9, 16, 25];
 let tex = "";
-for (let x in num) {
-  console.log(tex + num1[x]);
+for (let x in num12) {
+  console.log(tex + num12[x]);
 }
 
 let num = 10;
@@ -89,3 +89,26 @@ for (let i = 5; i <= 10; i++) {
   arrayOfNumbers[i - 5] = i;
 }
 console.log(arrayOfNumbers);
+
+/////// Function
+
+////Function declaraion
+function number(num2) {
+  console.log(num2);
+}
+
+number(20);
+
+//////function Expretion
+
+let mes = function () {
+  console.log("Hello");
+};
+
+mes();
+
+///////Arrow function
+
+const calc = (a1, b1) => a1 + b1;
+
+console.log(calc(4, 5));
