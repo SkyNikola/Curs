@@ -110,5 +110,4 @@ mes();
 ///////Arrow function
 
 const calc = (a1, b1) => a1 + b1;
-
 console.log(calc(4, 5));
