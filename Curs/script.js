@@ -111,3 +111,119 @@ mes();
 
 const calc = (a1, b1) => a1 + b1;
 console.log(calc(4, 5));
+
+const usdCurs = 3.87;
+const eurCurs = 4.05;
+const discount = 0.9;
+
+function convert(amount, curs) {
+  return curs * amount;
+}
+
+function promotion(result) {
+  console.log(discount * result);
+}
+
+promotion(convert(100, usdCurs));
+
+function sayHello(namePerson) {
+  console.log(`Hello  ${namePerson}`);
+}
+
+sayHello("Anton");
+
+////// String
+
+const str = "test";
+
+console.log(str.length);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+const fruit = "Some fruit";
+
+console.log(fruit.indexOf("r"));
+
+const logg = "Hellow word";
+
+console.log(logg.slice(6, 11));
+console.log(logg.slice(6));
+console.log(logg.slice(-5, -1));
+
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 5));
+
+//////////////// Math
+
+const num2 = 12.2;
+
+console.log(Math.round(num2));
+console.log(parseFloat(num2));
+console.log(parseInt(num2));
+
+const word = "    Nik     ";
+console.log(word.trim());
+console.log(word.trim());
+
+//////////////Function Callback
+
+function learn(lang, callback) {
+  console.log(`I learn : ${lang}`);
+  callback();
+}
+
+learn("Java Script", function () {
+  console.log("I finisz thal lection");
+});
+
+///////////////////// Objects
+
+const object = {
+  name: "test",
+  wheith: 1024,
+  height: 1024,
+  color: {
+    border: "red",
+    bg: "blue",
+  },
+};
+
+//  console.log(Object)
+
+//  for (let key in Object) {
+//   console.log(`Objects ${key} has dane ${Object[key]}`)
+//  };
+
+//  console.log (object["color"]["border"]);
+
+let conter = 0;
+
+for (let key in object) {
+  if (typeof object[key] === "object") {
+    for (let i in object[key])
+      console.log(`Objects ${i} has dane ${object[key][i]}`);
+    conter++;
+  } else {
+    console.log(`Objects ${key} has dane ${object[key]}`);
+    conter++;
+  }
+}
+
+console.log(conter);
+
+console.log(Object.keys(object).length);
+
+////////////////// Arrays
+
+const arr = [2, 3, 5, 10];
+
+arr.pop();
+arr.push(1);
+
+for (let x of arr) {
+  console.log(x);
+}
+
+arr[99] = 1;
+
+console.log(arr.length);
