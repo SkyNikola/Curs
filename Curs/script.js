@@ -224,6 +224,20 @@ for (let x of arr) {
   console.log(x);
 }
 
-arr[99] = 1;
+//arr[99] = 1;
 
 console.log(arr.length);
+console.log(arr);
+
+arr.forEach(function (item, i, arr) {
+  console.log(`${i} : ${item} inside ${arr}`);
+});
+
+const str1 = prompt("", "");
+const products = str1.split(",");
+products.sort();
+console.log(products.join(":"));
+
+const arr1 = [1, 26, 13, 4, 10];
+arr1.sort((a, b) => a - b);
+console.log(arr1);
