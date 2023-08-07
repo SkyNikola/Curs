@@ -233,11 +233,94 @@ arr.forEach(function (item, i, arr) {
   console.log(`${i} : ${item} inside ${arr}`);
 });
 
-const str1 = prompt("", "");
+const str1 = "bbbbb,aaaa,xxxx,gggg";
 const products = str1.split(",");
 products.sort();
-console.log(products.join(":"));
+//console.log(products.join(":"));
+console.log(products);
+//console.log(str1)
 
 const arr1 = [1, 26, 13, 4, 10];
 arr1.sort((a, b) => a - b);
 console.log(arr1);
+
+//////////////
+
+const obj = {
+  a: 1,
+  b: 2,
+};
+
+function copy(mainObj) {
+  let objCopy = {};
+  let key;
+  for (key in mainObj) {
+    objCopy[key] = mainObj[key];
+  }
+  return objCopy;
+}
+
+const numbers = {
+  a: 2,
+  b: 5,
+  c: {
+    x: 7,
+    y: 4,
+  },
+};
+
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+
+console.log(newNumbers);
+console.log(numbers);
+
+const add = {
+  d: 4,
+  e: 5,
+};
+
+console.log(Object.assign(numbers, add));
+const clone = Object.assign({}, add);
+clone.d = 10;
+
+console.log(clone);
+
+///////////////// Arrays
+
+const oldArr = ["a", "b", "c"];
+const newArr = oldArr.slice();
+
+newArr[1] = "asdf";
+console.log(newArr);
+
+//////////////////
+
+const video = ["youtue", "viemo", "rutube"],
+  blog = ["wordpress", "livejornal", "blogger"],
+  internernet = [...video, ...blog, "vk", "fasebook"];
+
+console.log(internernet);
+
+function log(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+const num3 = [1, 3, 5];
+log(...num3);
+
+const array = ["a", "b"];
+const newArry = [...array];
+
+const q = {
+  one: 1,
+  two: 2,
+};
+
+const newObj = { ...q };
+
+console.log(newObj);
+
